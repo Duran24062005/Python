@@ -1,0 +1,64 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+.venv/
+pip-log.txt
+pip-delete-this-directory.txt
+.eggs/
+*.egg-info/
+dist/
+build/
+
+# Entorno y secretos
+.env
+.env.local
+.env.development
+.env.production
+.env*.local
+
+# Testing
+.coverage
+.pytest_cache/
+htmlcov/
+.tox/
+
+# Logs
+*.log
+logs/
+
+# IDE
+.vscode/
+.idea/
+*.iml
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Git
+.git/
+.gitignore
+
+# Docker
+.dockerignore
+
+# Docs y artefactos no necesarios para la imagen
+docs/
+prds/
+
+# Scripts de inicialización (ya los maneja docker-entrypoint)
+test_smtp.py
+
+# Uploads generados en runtime
+app/uploads/
+
+# Herramientas locales
+.codex/
