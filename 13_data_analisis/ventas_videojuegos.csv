@@ -1,0 +1,205 @@
+nombre,plataforma,genero,anio,editora,ventas_na,ventas_eu,ventas_jp,ventas_otros,ventas_global
+The Elder Scrolls V: Skyrim,X360,Rol,2011,Bethesda,7.12,6.35,6.99,2.26,22.72
+Assassin's Creed Odyssey,PS4,Accion,2018,Ubisoft,3.85,2.99,0.64,0.55,8.03
+Fall Guys,PS4,Plataformas,2020,Devolver Digital,0.4,0.26,0.15,0.08,0.89
+Tekken 7,PS4,Lucha,2017,Bandai Namco,1.09,0.9,1.1,0.33,3.42
+It Takes Two,PS4,Aventura,2021,Electronic Arts,1.11,0.84,0.3,0.2,2.45
+Super Mario World,SNES,Plataformas,1990,Nintendo,3.68,2.68,2.16,0.69,9.21
+The Legend of Zelda: Tears of the Kingdom,Switch,Aventura,2023,Nintendo,1.72,1.42,1.01,0.41,4.56
+Forza Motorsport 3,X360,Carreras,2009,Microsoft,2.0,2.34,0.42,0.65,5.41
+FIFA 19,PS4,Deportes,2018,Electronic Arts,4.65,4.65,0.58,1.41,11.29
+Sonic Mania,Switch,Plataformas,2017,Sega,1.96,1.75,0.98,0.37,5.06
+Kingdom Hearts III,PS4,Rol,2019,Square Enix,1.23,1.02,1.36,0.3,3.91
+Call of Duty: Modern Warfare 3,X360,Disparos,2011,Activision,4.52,2.94,0.68,1.14,9.28
+Monster Hunter Rise,Switch,Rol,2021,Capcom,1.67,1.5,2.08,0.44,5.69
+Wii Sports,Wii,Deportes,2006,Nintendo,7.14,8.28,2.82,1.43,19.67
+Pokemon Sword/Shield,Switch,Rol,2019,Nintendo,1.42,1.42,2.3,0.43,5.57
+Pokemon Diamond/Pearl,DS,Rol,2006,Nintendo,6.08,4.99,7.4,1.99,20.46
+Mario Kart 8,Wii U,Carreras,2014,Nintendo,2.66,2.76,1.47,0.81,7.7
+Wii Fit,Wii,Deportes,2007,Nintendo,9.7,12.77,3.39,3.43,29.29
+Halo 2,Xbox,Disparos,2004,Microsoft,4.09,2.76,0.41,1.03,8.29
+Tomb Raider,PS1,Aventura,1996,Square Enix,2.97,2.18,1.16,0.39,6.7
+Starfield,XOne,Rol,2023,Bethesda,0.49,0.39,0.48,0.13,1.49
+Pokemon Scarlet/Violet,Switch,Rol,2022,Nintendo,2.36,2.17,3.36,0.68,8.57
+Forza Horizon 4,XOne,Carreras,2018,Microsoft,3.64,3.1,1.03,0.98,8.75
+Uncharted 4,PS4,Aventura,2016,Sony,2.11,1.37,0.47,0.56,4.51
+Ratchet & Clank: Rift Apart,PS5,Plataformas,2021,Sony,1.37,1.04,0.41,0.31,3.13
+Just Dance 2017,Wii,Musica,2016,Ubisoft,0.31,0.26,0.06,0.03,0.66
+Final Fantasy VII,PS1,Rol,1997,Square Enix,2.78,2.77,3.19,1.26,10.0
+Diablo IV,PC,Rol,2023,Activision,0.75,0.55,0.54,0.25,2.09
+Assassin's Creed IV: Black Flag,PS3,Accion,2013,Ubisoft,5.46,3.88,1.12,1.1,11.56
+Pokemon X/Y,3DS,Rol,,Nintendo,2.47,2.39,2.58,0.82,8.26
+Donkey Kong Country,SNES,Plataformas,1994,Nintendo,4.6,3.74,2.18,0.83,11.35
+Call of Duty: Black Ops,X360,Disparos,2010,,2.96,1.75,0.36,0.43,5.5
+Hades,Switch,Rol,2020,Supergiant Games,1.16,0.96,0.94,0.29,3.35
+Metroid Dread,Switch,Aventura,2021,Nintendo,1.93,1.63,0.98,0.35,4.89
+Pokemon Gold/Silver,GB,Rol,1999,Nintendo,5.39,3.99,6.73,1.35,17.46
+The Legend of Zelda: Ocarina of Time,N64,Aventura,1998,Nintendo,4.12,3.33,1.74,1.13,10.32
+Pokemon Red/Blue,GB,Rol,1996,Nintendo,6.94,6.02,8.38,2.31,23.65
+NBA 2K20,PS4,Deportes,2019,Take-Two,1.65,1.69,0.12,0.28,3.74
+Madden NFL 19,PS4,Deportes,2018,Electronic Arts,3.15,3.03,0.15,0.84,7.17
+Super Smash Bros. Ultimate,Switch,Lucha,2018,Nintendo,7.12,5.1,5.73,1.7,19.65
+Minecraft,PS3,Aventura,2013,Mojang,9.38,6.51,3.03,2.29,21.21
+Cyberpunk 2077,PC,Rol,2020,CD Projekt,2.57,1.75,2.14,0.64,7.1
+Crash Bandicoot,PS1,Plataformas,1996,Sony,4.61,3.48,1.9,0.53,10.52
+Baldur's Gate 3,PS5,Rol,2023,Larian Studios,1.8,1.3,1.79,0.58,5.47
+Tom Clancy's Rainbow Six Siege,PS4,Disparos,2015,Ubisoft,0.65,0.46,0.06,0.1,1.27
+Grand Theft Auto V,PS4,Accion,,Rockstar Games,14.59,8.88,4.27,3.71,31.45
+The Legend of Zelda: A Link to the Past,SNES,Aventura,1991,Nintendo,1.52,1.32,0.74,0.24,3.82
+Baldur's Gate 3,PC,Rol,2023,Larian Studios,1.86,1.56,1.6,0.71,5.73
+Grand Theft Auto V,PC,Accion,2015,Rockstar Games,13.76,9.55,3.54,2.86,29.71
+Forza Horizon 5,XOne,Carreras,2021,Microsoft,1.81,1.71,0.52,0.61,4.65
+Super Mario Bros.,NES,Plataformas,1985,Nintendo,6.29,5.33,4.01,1.48,17.11
+Luigi's Mansion 3,Switch,Aventura,2019,,1.88,1.53,0.8,0.57,4.78
+Splatoon 2,Switch,Disparos,2017,,2.25,1.88,0.79,0.56,5.48
+Metal Gear Solid,PS1,Accion,1998,Konami,2.12,1.71,0.8,0.34,4.97
+Grand Theft Auto V,PS3,Accion,2013,Rockstar Games,9.93,6.52,2.8,1.87,21.12
+The Sims 4,PC,Simulacion,,Electronic Arts,2.8,2.68,0.64,0.43,6.55
+Gran Turismo 5,PS3,Carreras,2010,Sony,2.77,3.23,0.49,0.51,7.0
+Batman: Arkham City,X360,Accion,2011,Warner Bros.,2.6,1.55,0.4,0.36,4.91
+Overwatch,PS4,Disparos,2016,Activision,4.73,3.06,0.53,1.11,9.43
+The Last of Us Part II,PS4,Aventura,2020,Sony,4.91,3.31,1.55,0.72,10.49
+Max Payne 3,PS3,Accion,2012,Rockstar Games,1.67,1.25,0.36,0.28,3.56
+BioShock,X360,Disparos,2007,,0.27,0.22,0.02,0.07,0.58
+Minecraft,PC,Aventura,2011,Mojang,10.54,7.87,2.59,2.41,23.41
+Tony Hawk's Pro Skater 2,PS1,Deportes,2000,Activision,2.13,2.23,0.38,0.69,5.43
+Call of Duty: Black Ops II,PS3,Disparos,2012,Activision,5.98,4.42,0.37,1.28,12.05
+Borderlands 2,X360,Disparos,2012,Take-Two,0.46,0.34,0.03,0.12,0.95
+Sekiro,PS4,Accion,2019,Activision,0.7,0.46,0.11,0.17,1.44
+Death Stranding,PS4,Aventura,2019,Sony,1.7,1.15,0.42,0.18,3.45
+Street Fighter V,PS4,Lucha,2016,Capcom,1.88,1.39,1.77,0.64,5.68
+FIFA 18,PS4,Deportes,2017,Electronic Arts,2.19,1.83,0.16,0.41,4.59
+Yakuza 0,PS4,Accion,2015,Sega,0.38,0.28,0.15,0.05,0.86
+Wii Sports Resort,Wii,Deportes,2009,Nintendo,8.43,10.09,2.86,3.18,24.56
+Devil May Cry 5,PS4,Accion,2019,Capcom,0.33,0.25,0.12,0.09,0.79
+Super Smash Bros. Melee,GameCube,Lucha,2001,Nintendo,3.94,2.5,3.65,0.85,10.94
+Super Mario 64,N64,Plataformas,1996,Nintendo,2.24,2.02,1.26,0.48,6.0
+Chrono Trigger,SNES,Rol,1995,Square Enix,1.38,1.04,1.66,0.32,4.4
+Batman: Arkham Knight,PS4,Accion,2015,Warner Bros.,1.28,0.76,0.31,0.23,2.58
+Civilization VI,PC,Estrategia,2016,Take-Two,1.3,1.19,0.19,0.32,3.0
+Halo 3,X360,Disparos,2007,Microsoft,2.88,1.65,0.52,0.57,5.62
+New Super Mario Bros. Wii,Wii,Plataformas,2009,Nintendo,10.82,9.26,6.41,3.1,29.59
+Splatoon 3,Switch,Disparos,2022,Nintendo,3.53,2.4,0.64,0.48,7.05
+Diablo III,PC,Rol,2012,Activision,3.77,3.26,3.49,0.91,11.43
+Stardew Valley,PC,Simulacion,2016,ConcernedApe,1.5,1.12,0.27,0.32,3.21
+NBA 2K16,PS4,Deportes,2015,Take-Two,0.53,0.55,0.04,0.13,1.25
+Grand Theft Auto IV,PS3,Accion,,Rockstar Games,2.3,1.62,0.53,0.53,4.98
+Final Fantasy X,PS2,Rol,2001,Square Enix,1.4,1.2,1.76,0.36,4.72
+Pokemon Red/Blue,GB,Rol,1996,Nintendo,6.94,6.02,8.38,2.31,23.65
+Fallout 4,PS4,Rol,2015,Bethesda,3.11,2.58,3.18,1.32,10.19
+Dragon Quest XI,PS4,Rol,2017,Square Enix,1.28,1.15,1.56,0.58,4.57
+Kingdom Hearts,PS2,Rol,2002,Square Enix,2.32,1.8,2.39,0.76,7.27
+Minecraft,Switch,Aventura,2018,Mojang,13.01,7.67,3.57,1.47,25.72
+Half-Life 2,PC,Disparos,2004,Valve,3.6,2.93,0.21,0.81,7.55
+Grand Theft Auto: San Andreas,PS2,Accion,2004,Rockstar Games,4.39,2.93,1.25,0.95,9.52
+LEGO Star Wars,PS2,Aventura,2005,Warner Bros.,1.73,1.16,0.42,0.19,3.5
+Rock Band,X360,Musica,2007,Electronic Arts,1.26,0.91,0.09,0.22,2.48
+Xenoblade Chronicles 3,Switch,Rol,2022,Nintendo,1.01,0.78,1.25,0.37,3.41
+Mortal Kombat X,PS4,Lucha,2015,Warner Bros.,2.83,1.75,1.49,0.89,6.96
+Doom,PS4,Disparos,2016,Bethesda,1.97,1.35,0.22,0.33,3.87
+Bloodborne,PS4,Rol,2015,Sony,1.28,0.98,1.2,0.41,3.87
+Sonic Adventure,Dreamcast,Plataformas,1998,Sega,0.57,0.44,0.28,0.09,1.38
+Mario Kart 8 Deluxe,Switch,Carreras,2017,Nintendo,10.72,12.26,3.94,3.71,30.63
+Demon's Souls,PS5,Rol,2020,Sony,1.17,1.0,1.06,0.46,3.69
+Fallout 3,X360,Rol,2008,Bethesda,3.47,2.78,3.41,0.91,10.57
+Nintendo Switch Sports,Switch,Deportes,2022,Nintendo,0.3,0.38,0.08,0.08,0.84
+Returnal,PS5,Disparos,2021,Sony,0.85,0.59,0.04,0.16,1.64
+Wii Sports,Wii,Deportes,2006,Nintendo,7.14,8.28,2.82,1.43,19.67
+Marvel's Spider-Man,PS4,Accion,2018,Sony,5.29,3.75,1.08,1.09,11.21
+Sonic the Hedgehog 2,Genesis,Plataformas,1992,Sega,0.61,0.57,0.46,0.07,1.71
+The Witcher 3: Wild Hunt,PS4,Rol,2015,CD Projekt,3.3,2.26,3.03,0.87,9.46
+Persona 5,PS4,Rol,2016,Sega,1.96,1.99,2.75,0.72,7.42
+Street Fighter II,SNES,Lucha,1992,Capcom,1.56,1.41,1.48,0.39,4.84
+Final Fantasy XV,PS4,Rol,2016,Square Enix,0.7,0.63,0.85,0.18,2.36
+The Witcher 3: Wild Hunt,PC,Rol,2015,CD Projekt,2.08,1.76,1.92,0.42,6.18
+Ring Fit Adventure,Switch,Deportes,2019,Nintendo,1.3,1.82,0.37,0.51,4.0
+Fire Emblem: Three Houses,Switch,Estrategia,2019,Nintendo,1.54,1.54,0.42,0.44,3.94
+Kirby Star Allies,Switch,Plataformas,2018,Nintendo,1.85,1.54,1.09,0.36,4.84
+Mortal Kombat 11,PS4,Lucha,2019,Warner Bros.,2.6,1.63,1.57,0.54,6.34
+Red Dead Redemption,X360,Accion,2010,Rockstar Games,3.84,2.48,1.11,0.59,8.02
+Dark Souls III,PS4,Rol,2016,Bandai Namco,0.3,0.3,0.4,0.09,1.09
+Mario Tennis,N64,Deportes,2000,Nintendo,1.18,1.24,0.38,0.39,3.19
+Battlefield 1,PS4,Disparos,2016,Electronic Arts,3.06,1.77,0.21,0.5,5.54
+Super Smash Bros. Brawl,Wii,Lucha,2008,Nintendo,2.25,1.53,2.0,0.46,6.24
+Wii Play,Wii,Puzzle,2006,Nintendo,8.73,7.55,7.69,1.18,25.15
+Super Mario Galaxy,Wii,Plataformas,2007,Nintendo,3.81,2.98,2.25,0.6,9.64
+World of Warcraft,PC,Rol,2004,Activision,2.93,2.52,2.62,0.79,8.86
+Halo Infinite,XOne,Disparos,2021,Microsoft,2.07,1.41,0.1,0.51,4.09
+The Legend of Zelda: Breath of the Wild,Switch,Aventura,2017,Nintendo,9.62,8.35,4.71,3.07,25.75
+Brain Age,DS,Puzzle,2005,Nintendo,3.46,3.28,2.95,0.92,10.61
+Pro Evolution Soccer 2014,PS3,Deportes,2013,Konami,0.77,0.95,0.24,0.17,2.13
+GoldenEye 007,N64,Disparos,1997,Nintendo,1.44,1.29,0.4,0.28,3.41
+Battlefield 1,PS4,Disparos,2016,Electronic Arts,3.06,1.77,0.21,0.5,5.54
+Mario Kart DS,DS,Carreras,2005,Nintendo,8.88,11.47,4.66,3.01,28.02
+Pikmin 4,Switch,Estrategia,2023,Nintendo,0.62,0.53,0.19,0.06,1.4
+New Super Mario Bros.,DS,Plataformas,2006,Nintendo,9.37,8.3,5.27,3.01,25.95
+Mario Kart Wii,Wii,Carreras,2008,Nintendo,6.36,7.71,3.65,1.44,19.16
+Gran Turismo 3,PS2,Carreras,2001,Sony,2.7,3.08,0.54,0.95,7.27
+Injustice 2,PS4,Lucha,2017,Warner Bros.,3.22,2.01,2.14,1.05,8.42
+FIFA 14,X360,Deportes,2013,Electronic Arts,0.37,0.36,0.06,0.11,0.9
+Resident Evil Village,PS4,Aventura,2021,Capcom,4.98,3.63,2.6,1.46,12.67
+EA Sports FC 24,PS5,Deportes,2023,Electronic Arts,0.53,0.44,0.04,0.1,1.11
+Nintendogs,DS,Simulacion,2005,Nintendo,4.8,4.12,2.05,1.27,12.24
+Call of Duty: Modern Warfare,PS4,Disparos,2019,Activision,5.75,3.84,0.29,1.31,11.19
+The Elder Scrolls V: Skyrim,PS3,Rol,2011,Bethesda,11.14,6.68,8.29,2.91,29.02
+Hollow Knight,Switch,Plataformas,2017,Team Cherry,3.33,2.39,1.04,0.8,7.56
+Resident Evil 2,PS4,Aventura,2019,Capcom,3.66,3.2,1.92,1.24,10.02
+Tomb Raider,PS3,Aventura,2013,Square Enix,2.13,1.71,1.12,0.42,5.38
+Horizon Zero Dawn,PS4,Rol,2017,Sony,3.0,2.31,2.66,1.09,9.06
+God of War Ragnarok,PS5,Aventura,2022,Sony,0.61,0.39,0.15,0.08,1.23
+Pokemon Sun/Moon,3DS,Rol,2016,Nintendo,1.63,1.32,2.1,0.56,5.61
+Guitar Hero III,PS2,Musica,2007,Activision,2.89,2.34,0.27,0.5,6.0
+Gears of War 2,X360,Disparos,2008,Microsoft,4.87,3.14,0.55,1.37,9.93
+Civilization V,PC,Estrategia,2010,Take-Two,2.47,1.73,0.22,0.24,4.66
+The Sims 3,PC,Simulacion,2009,Electronic Arts,2.81,2.36,0.38,0.57,6.12
+Animal Crossing: New Horizons,Switch,Simulacion,2020,Nintendo,9.9,8.67,3.0,1.96,23.53
+World of Warcraft,PC,Rol,2004,Activision,2.93,2.52,2.62,0.79,8.86
+Among Us,PC,Estrategia,2018,InnerSloth,0.89,0.75,0.08,0.23,1.95
+Hogwarts Legacy,PS5,Rol,2023,Warner Bros.,1.94,1.5,1.47,0.66,5.57
+Call of Duty: WWII,PS4,Disparos,2017,Activision,5.07,3.33,0.42,1.09,9.91
+Rayman Legends,PS3,Plataformas,2013,Ubisoft,0.79,0.54,0.26,0.12,1.71
+Battlefield 4,PS4,Disparos,2013,Electronic Arts,4.31,3.09,0.67,1.2,9.27
+Borderlands 3,PS4,Disparos,2019,Take-Two,0.35,0.26,0.06,0.04,0.71
+Marvel's Spider-Man 2,PS5,Accion,2023,Sony,1.62,1.14,0.45,0.29,3.5
+Spyro the Dragon,PS1,Plataformas,1998,Sony,4.8,3.47,1.54,0.69,10.5
+Metal Gear Solid V,PS4,Accion,2015,Konami,1.3,1.05,0.46,0.42,3.23
+Ghost of Tsushima,PS4,Aventura,2020,Sony,0.21,0.15,0.04,0.05,0.45
+LittleBigPlanet,PS3,Plataformas,2008,Sony,1.89,1.21,0.71,0.19,4.0
+Dance Dance Revolution,PS2,Musica,2001,Konami,0.44,0.38,0.14,0.04,1.0
+Portal 2,PC,Puzzle,2011,Valve,1.79,1.25,1.31,0.27,4.62
+Assassin's Creed Valhalla,PS4,Accion,2020,Ubisoft,5.81,4.09,1.6,0.67,12.17
+Cuphead,PC,Plataformas,2017,StudioMDHR,0.65,0.45,0.24,0.17,1.51
+Mario Kart 7,3DS,Carreras,2011,Nintendo,2.81,3.04,1.13,0.57,7.55
+The Legend of Zelda: Twilight Princess,Wii,Aventura,2006,Nintendo,2.04,1.35,0.81,0.33,4.53
+Elden Ring,PC,Rol,,Bandai Namco,1.7,1.97,2.22,0.64,6.53
+Resident Evil 7,PS4,Aventura,2017,Capcom,2.51,2.06,1.48,0.53,6.58
+God of War,PS4,Aventura,2018,Sony,3.47,2.16,1.24,0.44,7.31
+Detroit: Become Human,PS4,Aventura,2018,Sony,1.87,1.3,0.52,0.42,4.11
+Dota 2,PC,Estrategia,2013,Valve,1.47,1.09,0.2,0.18,2.94
+Tetris,GB,Puzzle,1989,Nintendo,7.38,6.61,6.98,1.96,22.93
+Monster Hunter: World,PS4,Rol,2018,Capcom,2.13,2.22,3.06,0.85,8.26
+Gran Turismo 7,PS5,Carreras,2022,Sony,1.08,1.16,0.37,0.32,2.93
+FIFA 21,PS4,Deportes,2020,Electronic Arts,2.59,2.18,0.18,0.68,5.63
+L.A. Noire,PS3,Accion,2011,Rockstar Games,2.9,1.92,0.46,0.53,5.81
+Mario + Rabbids,Switch,Estrategia,2017,Ubisoft,1.08,0.85,0.16,0.19,2.28
+Just Dance 2014,Wii,Musica,2013,Ubisoft,4.02,2.74,0.19,0.42,7.37
+FIFA 23,PS5,Deportes,2022,Electronic Arts,4.68,4.31,0.96,1.09,11.04
+Need for Speed: Most Wanted,PS2,Carreras,2005,Electronic Arts,2.3,2.59,0.58,0.47,5.94
+Halo: Combat Evolved,Xbox,Disparos,2001,Microsoft,3.16,2.09,0.14,0.72,6.11
+Doom Eternal,PS4,Disparos,2020,Bethesda,0.76,0.51,0.12,0.12,1.51
+Resident Evil 4,GameCube,Aventura,2005,Capcom,2.33,1.88,1.17,0.73,6.11
+StarCraft II,PC,Estrategia,,Activision,1.73,1.44,0.15,0.36,3.68
+Metroid Prime,GameCube,Disparos,2002,Nintendo,0.27,0.23,0.1,0.09,0.69
+Red Dead Redemption 2,PS4,Accion,2018,Rockstar Games,5.39,4.16,1.29,1.12,11.96
+Counter-Strike: Global Offensive,PC,Disparos,2012,Valve,3.74,2.69,0.47,0.78,7.68
+Super Mario Odyssey,Switch,Plataformas,2017,Nintendo,7.26,6.31,3.79,1.88,19.24
+Pikmin,GameCube,Estrategia,2001,Nintendo,1.92,1.8,0.73,0.4,4.85
+Far Cry 5,PS4,Disparos,,Ubisoft,1.7,1.07,0.19,0.33,3.29
+Crash Team Racing,PS1,Carreras,1999,Sony,0.32,0.32,0.1,0.06,0.8
+Super Mario 3D World,Wii U,Plataformas,2013,Nintendo,2.23,1.99,1.03,0.29,5.54
+Gran Turismo,PS1,Carreras,1997,Sony,4.18,3.64,0.77,0.71,9.3
+Elden Ring,PS5,Rol,2022,Bandai Namco,2.25,1.82,2.81,0.61,7.49
+Gran Turismo Sport,PS4,Carreras,2017,,0.33,0.32,0.06,0.05,0.76
+The Last of Us,PS3,Aventura,2013,Sony,3.09,2.0,0.87,0.41,6.37
+Assassin's Creed II,X360,Accion,2009,Ubisoft,3.92,2.72,1.24,0.7,8.58
+Call of Duty: Modern Warfare 2,X360,Disparos,2009,Activision,5.15,3.59,0.41,1.0,10.15
