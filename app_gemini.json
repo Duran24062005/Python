@@ -1,0 +1,49 @@
+{
+  "applets": [{
+    "lastAccessTime": "2026-08-10T00:40:22.210668Z",
+    "firstAccessTime": "2026-08-09T22:31:53.586400Z",
+    "source": {
+      "sourceType": "SPANNER",
+      "spanner": {
+        "id": "b4bcbf6b-c4c7-4506-9e81-c55baeebeeea"
+      }
+    },
+    "name": "Finanzas Personales",
+    "description": "Gestión de finanzas personales con reportes mensuales detallados y gráficas interactivas."
+  }, {
+    "lastAccessTime": "2026-07-17T17:37:09.153675Z",
+    "firstAccessTime": "2026-07-17T17:23:36.303364Z",
+    "source": {
+      "sourceType": "SPANNER",
+      "spanner": {
+        "id": "bf9fd954-e661-4ab8-85bd-119fd626d78e"
+      }
+    },
+    "name": "FinZ",
+    "description": "Control táctico de finanzas personales con plan de choque y límites estrictos."
+  }, {
+    "lastAccessTime": "2026-07-16T19:42:13.091798Z",
+    "firstAccessTime": "2026-07-10T00:03:14.121405Z",
+    "source": {
+      "sourceType": "SPANNER",
+      "spanner": {
+        "id": "37511d79-75b8-4d32-84d2-8d3c6c143209"
+      }
+    },
+    "name": "Mujeres al Pedal",
+    "description": "Plataforma de E-Commerce para la marca Mujeres al Pedal, con catálogo inteligente, panel de administración con gráficas en tiempo real y exportación de reportes.",
+    "runtimeType": 1
+  }, {
+    "lastAccessTime": "2026-07-09T23:51:12.500468Z",
+    "firstAccessTime": "2026-07-09T21:44:55.823446Z",
+    "source": {
+      "sourceType": "SPANNER",
+      "spanner": {
+        "id": "4b78a2e3-1cd8-4408-9be7-4dea0ef8b5bd"
+      }
+    },
+    "name": "Mujeres al Pedal",
+    "description": "Tienda online oficial y consola de administración de la VI Travesía Restrepo 2026. Incluye control de acceso por rol (RBAC), métricas visuales y sistema de exportación de datos en PDF, Excel y CSV.",
+    "runtimeType": 1
+  }]
+}
