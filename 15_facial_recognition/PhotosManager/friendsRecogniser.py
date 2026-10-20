@@ -39,6 +39,8 @@ PROJECT_DIR = MODULE_DIR.parent
 PHOTO_DATA_DIR = PROJECT_DIR / "assets" / "carpetas"
 DEFAULT_KNOWN_DIR = PHOTO_DATA_DIR / "conocidos"
 DEFAULT_TEST_DIR = PHOTO_DATA_DIR / "pruebas"
+DEFAULT_DETECTOR_BACKEND = "yunet"
+DEFAULT_MIN_FACE_SIZE = 40
 KNOWN_EXTENSIONS = frozenset({".png"})
 TEST_EXTENSIONS = frozenset({".bmp", ".jpeg", ".jpg", ".png", ".webp"})
 WINDOW_NAME = "PhotosManager - reconocimiento facial"
@@ -58,6 +60,7 @@ class FaceMatch:
 
     name: str
     distance: float | None = None
+    threshold: float | None = None
     matched: bool = False
 
     @property
@@ -72,6 +75,17 @@ class ProcessingSummary:
     photos_analyzed: int
     recognized_people: tuple[str, ...]
     interrupted: bool = False
+
+
+@dataclass(frozen=True)
+class FaceComparison:
+    """Comparación individual contra una persona conocida."""
+
+    known_name: str
+    distance: float | None
+    threshold: float | None
+    verified: bool
+    error: str | None = None
 
 
 def _is_ignored_path(path: Path) -> bool:
@@ -128,8 +142,19 @@ def extract_faces(
     *,
     detector_backend: str,
     enforce_detection: bool,
+    min_face_size: int = DEFAULT_MIN_FACE_SIZE,
 ) -> list[dict[str, Any]]:
-    """Extrae caras y conserva su caja junto con el recorte alineado."""
+    """Extrae caras válidas y conserva su caja junto con el recorte alineado.
+
+    DeepFace devuelve una región que ocupa toda la imagen cuando se usa
+    ``enforce_detection=False`` y no encuentra ninguna cara. Esa región tiene
+    confianza cero y no debe entrar al reconocimiento. También se descartan
+    detecciones demasiado pequeñas, que suelen ser falsos positivos del
+    detector Haar/OpenCV sobre el fondo.
+    """
+
+    if min_face_size < 0:
+        raise ValueError("min_face_size no puede ser negativo")
 
     deepface = _require_deepface()
     detected_faces = deepface.extract_faces(
@@ -143,19 +168,36 @@ def extract_faces(
 
     if isinstance(detected_faces, dict):
         detected_faces = [detected_faces]
-    return [
-        face
-        for face in detected_faces
-        if isinstance(face, dict)
-        and "face" in face
-        and "facial_area" in face
-    ]
+    valid_faces: list[dict[str, Any]] = []
+    for face in detected_faces:
+        if (
+            not isinstance(face, dict)
+            or "face" not in face
+            or "facial_area" not in face
+        ):
+            continue
+
+        area = face["facial_area"]
+        if not isinstance(area, dict):
+            continue
+
+        width = max(0, int(area.get("w", 0)))
+        height = max(0, int(area.get("h", 0)))
+        confidence = _as_distance(face.get("confidence"))
+        if width < min_face_size or height < min_face_size:
+            continue
+        if confidence is not None and confidence <= 0:
+            continue
+        valid_faces.append(face)
+
+    return valid_faces
 
 
 def load_known_people(
     paths: Sequence[Path],
     *,
     detector_backend: str,
+    min_face_size: int = DEFAULT_MIN_FACE_SIZE,
 ) -> tuple[KnownPerson, ...]:
     """Valida y extrae exactamente una cara de cada imagen conocida."""
 
@@ -178,6 +220,7 @@ def load_known_people(
             str(path),
             detector_backend=detector_backend,
             enforce_detection=True,
+            min_face_size=min_face_size,
         )
         if len(faces) != 1:
             raise ValueError(
@@ -216,11 +259,49 @@ def find_best_match(
     *,
     model_name: str,
     distance_metric: str,
+    threshold: float | None = None,
 ) -> FaceMatch:
     """Devuelve la mejor persona verificada o ``unknown`` si no hay coincidencia."""
 
-    deepface = _require_deepface()
     best_match: FaceMatch | None = None
+
+    for comparison in compare_face_to_known_people(
+        face,
+        known_people,
+        model_name=model_name,
+        distance_metric=distance_metric,
+        threshold=threshold,
+    ):
+        if comparison.error is not None or not comparison.verified:
+            continue
+        if comparison.distance is None:
+            continue
+
+        candidate = FaceMatch(
+            name=comparison.known_name,
+            distance=comparison.distance,
+            threshold=comparison.threshold,
+            matched=True,
+        )
+        if _is_better_match(candidate, best_match):
+            best_match = candidate
+
+    return best_match or FaceMatch(name="unknown")
+
+
+def compare_face_to_known_people(
+    face: Any,
+    known_people: Sequence[KnownPerson],
+    *,
+    model_name: str,
+    distance_metric: str,
+    threshold: float | None = None,
+    emit_warnings: bool = True,
+) -> tuple[FaceComparison, ...]:
+    """Registra todas las comparaciones, incluidas las rechazadas o fallidas."""
+
+    deepface = _require_deepface()
+    comparisons: list[FaceComparison] = []
 
     for person in known_people:
         try:
@@ -233,26 +314,35 @@ def find_best_match(
                 enforce_detection=False,
                 align=False,
                 silent=True,
+                threshold=threshold,
             )
         except Exception as exc:  # una comparación fallida no invalida las demás
-            print(
-                f"Advertencia: no se pudo comparar una cara con '{person.name}': {exc}",
-                file=sys.stderr,
+            if emit_warnings:
+                print(
+                    f"Advertencia: no se pudo comparar una cara con '{person.name}': {exc}",
+                    file=sys.stderr,
+                )
+            comparisons.append(
+                FaceComparison(
+                    known_name=person.name,
+                    distance=None,
+                    threshold=None,
+                    verified=False,
+                    error=str(exc),
+                )
             )
             continue
 
-        if not bool(result.get("verified", False)):
-            continue
-
-        candidate = FaceMatch(
-            name=person.name,
-            distance=_as_distance(result.get("distance")),
-            matched=True,
+        comparisons.append(
+            FaceComparison(
+                known_name=person.name,
+                distance=_as_distance(result.get("distance")),
+                threshold=_as_distance(result.get("threshold")),
+                verified=bool(result.get("verified", False)),
+            )
         )
-        if _is_better_match(candidate, best_match):
-            best_match = candidate
 
-    return best_match or FaceMatch(name="unknown")
+    return tuple(comparisons)
 
 
 def _box_from_area(area: dict[str, Any], image_shape: Sequence[int]) -> tuple[int, int, int, int]:
@@ -308,6 +398,22 @@ def draw_face_annotation(image: Any, area: dict[str, Any], match: FaceMatch) -> 
     )
 
 
+def _has_eye_landmarks(area: dict[str, Any]) -> bool:
+    """Indica si el detector encontró ambos ojos en la región facial."""
+
+    return area.get("left_eye") is not None and area.get("right_eye") is not None
+
+
+def _should_annotate_face(area: dict[str, Any], match: FaceMatch) -> bool:
+    """Evita pintar falsos positivos sin landmarks, salvo si fueron reconocidos."""
+
+    # Una cara conocida puede estar parcialmente tapada y aun así producir un
+    # embedding fiable. Para una cara desconocida exigimos la señal geométrica
+    # mínima del detector; esto elimina cajas que Haar suele colocar sobre
+    # ropa, cabello o elementos del fondo.
+    return match.is_known or _has_eye_landmarks(area)
+
+
 def process_photo(
     path: Path,
     known_people: Sequence[KnownPerson],
@@ -315,6 +421,8 @@ def process_photo(
     model_name: str,
     detector_backend: str,
     distance_metric: str,
+    threshold: float | None = None,
+    min_face_size: int = DEFAULT_MIN_FACE_SIZE,
 ) -> tuple[Any, set[str]]:
     """Procesa una foto y devuelve la imagen anotada y los nombres encontrados."""
 
@@ -327,6 +435,7 @@ def process_photo(
         image,
         detector_backend=detector_backend,
         enforce_detection=False,
+        min_face_size=min_face_size,
     )
     recognized_people: set[str] = set()
     for face in faces:
@@ -335,7 +444,10 @@ def process_photo(
             known_people,
             model_name=model_name,
             distance_metric=distance_metric,
+            threshold=threshold,
         )
+        if not _should_annotate_face(face["facial_area"], match):
+            continue
         draw_face_annotation(image, face["facial_area"], match)
         if match.is_known:
             recognized_people.add(match.name)
@@ -350,6 +462,8 @@ def process_test_images(
     model_name: str,
     detector_backend: str,
     distance_metric: str,
+    threshold: float | None = None,
+    min_face_size: int = DEFAULT_MIN_FACE_SIZE,
     show: bool = True,
 ) -> ProcessingSummary:
     """Procesa las pruebas en orden y muestra cada resultado si corresponde."""
@@ -369,6 +483,8 @@ def process_test_images(
                     model_name=model_name,
                     detector_backend=detector_backend,
                     distance_metric=distance_metric,
+                    threshold=threshold,
+                    min_face_size=min_face_size,
                 )
             except (OSError, ValueError, RuntimeError) as exc:
                 print(f"Advertencia: se omite '{path.name}': {exc}", file=sys.stderr)
@@ -438,13 +554,31 @@ def build_parser() -> argparse.ArgumentParser:
     )
     parser.add_argument(
         "--detector-backend",
-        default="opencv",
-        help="detector de DeepFace (por defecto: opencv)",
+        default=DEFAULT_DETECTOR_BACKEND,
+        help="detector de DeepFace (por defecto: yunet)",
     )
     parser.add_argument(
         "--distance-metric",
         default="cosine",
         help="métrica de distancia de DeepFace (por defecto: cosine)",
+    )
+    parser.add_argument(
+        "--threshold",
+        type=float,
+        default=None,
+        help=(
+            "umbral explícito de verificación; por defecto DeepFace usa el "
+            "umbral calibrado para el modelo y la métrica"
+        ),
+    )
+    parser.add_argument(
+        "--min-face-size",
+        type=int,
+        default=DEFAULT_MIN_FACE_SIZE,
+        help=(
+            "tamaño mínimo de ancho/alto para una detección en píxeles "
+            f"(por defecto: {DEFAULT_MIN_FACE_SIZE})"
+        ),
     )
     parser.add_argument(
         "--no-display",
@@ -461,6 +595,8 @@ def main(argv: Sequence[str] | None = None) -> int:
     args = parser.parse_args(argv)
 
     try:
+        if args.threshold is not None and args.threshold < 0:
+            raise ValueError("threshold no puede ser negativo")
         known_paths = iter_image_files(args.known_dir, KNOWN_EXTENSIONS)
         test_paths = iter_image_files(args.test_dir, TEST_EXTENSIONS)
         if not test_paths:
@@ -469,6 +605,7 @@ def main(argv: Sequence[str] | None = None) -> int:
         known_people = load_known_people(
             known_paths,
             detector_backend=args.detector_backend,
+            min_face_size=args.min_face_size,
         )
         summary = process_test_images(
             known_people,
@@ -476,6 +613,8 @@ def main(argv: Sequence[str] | None = None) -> int:
             model_name=args.model_name,
             detector_backend=args.detector_backend,
             distance_metric=args.distance_metric,
+            threshold=args.threshold,
+            min_face_size=args.min_face_size,
             show=not args.no_display,
         )
     except (FileNotFoundError, RuntimeError, ValueError) as exc:
