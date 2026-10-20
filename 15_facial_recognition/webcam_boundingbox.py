@@ -90,3 +90,4 @@ cv2.imshow("Face Recognition", photo)
 
 cv2.waitKey(0)
 cv2.destroyAllWindows()
+q
