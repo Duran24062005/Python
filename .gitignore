@@ -39,6 +39,10 @@ logs/
 *.swp
 *.swo
 
+# Metadatos de macOS extraídos junto con imágenes
+__MACOSX/
+._*
+
 # OS
 .DS_Store
 Thumbs.db
