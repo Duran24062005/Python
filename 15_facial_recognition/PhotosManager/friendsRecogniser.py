@@ -35,8 +35,10 @@ else:
 
 
 MODULE_DIR = Path(__file__).resolve().parent
-DEFAULT_KNOWN_DIR = MODULE_DIR / "carpetas" / "conocidos"
-DEFAULT_TEST_DIR = MODULE_DIR / "carpetas" / "pruebas"
+PROJECT_DIR = MODULE_DIR.parent
+PHOTO_DATA_DIR = PROJECT_DIR / "assets" / "carpetas"
+DEFAULT_KNOWN_DIR = PHOTO_DATA_DIR / "conocidos"
+DEFAULT_TEST_DIR = PHOTO_DATA_DIR / "pruebas"
 KNOWN_EXTENSIONS = frozenset({".png"})
 TEST_EXTENSIONS = frozenset({".bmp", ".jpeg", ".jpg", ".png", ".webp"})
 WINDOW_NAME = "PhotosManager - reconocimiento facial"
@@ -415,7 +417,7 @@ def build_parser() -> argparse.ArgumentParser:
     """Construye la interfaz de línea de comandos."""
 
     parser = argparse.ArgumentParser(
-        description="Detecta y reconoce caras en PhotosManager/carpetas/pruebas."
+        description="Detecta y reconoce caras en assets/carpetas/pruebas."
     )
     parser.add_argument(
         "--known-dir",
