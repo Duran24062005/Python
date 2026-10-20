@@ -8,9 +8,9 @@ identificada visualmente y el proceso debe terminar con un resumen de resultados
 
 ## Alcance
 
-- Leer personas conocidas desde `carpetas/conocidos/*.png`.
+- Leer personas conocidas desde `assets/carpetas/conocidos/*.png`.
 - Usar el nombre del archivo, sin extensión, como nombre de la persona.
-- Leer fotos de prueba desde `carpetas/pruebas`.
+- Leer fotos de prueba desde `assets/carpetas/pruebas`.
 - Ignorar `__MACOSX`, archivos `._*` y `.DS_Store`.
 - Detectar cero, una o varias caras en cada foto de prueba.
 - Marcar coincidencias con rectángulo verde y el nombre de la persona.

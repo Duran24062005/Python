@@ -5,19 +5,21 @@ DeepFace.
 
 ## Estructura de datos
 
-La estructura incluida en este proyecto es:
+La estructura de datos utilizada por este proyecto es:
 
 ```text
-PhotosManager/
-├── friendsRecogniser.py
-└── carpetas/
-    ├── conocidos/
-    │   ├── monica.png
-    │   └── ...
-    ├── pruebas/
-    │   ├── imagen01.png
-    │   └── ...
-    └── __MACOSX/       # se ignora
+15_facial_recognition/
+├── assets/
+│   └── carpetas/
+│       ├── conocidos/
+│       │   ├── monica.png
+│       │   └── ...
+│       ├── pruebas/
+│       │   ├── imagen01.png
+│       │   └── ...
+│       └── __MACOSX/       # se ignora
+└── PhotosManager/
+    └── friendsRecogniser.py
 ```
 
 Cada imagen de `conocidos` debe mostrar una sola persona y su nombre se obtiene
@@ -58,8 +60,8 @@ También se pueden cambiar las carpetas y el modelo:
 
 ```bash
 uv run python PhotosManager/friendsRecogniser.py \
-  --known-dir PhotosManager/carpetas/conocidos \
-  --test-dir PhotosManager/carpetas/pruebas \
+  --known-dir assets/carpetas/conocidos \
+  --test-dir assets/carpetas/pruebas \
   --model-name VGG-Face \
   --detector-backend opencv \
   --distance-metric cosine
