@@ -1,0 +1,170 @@
+{
+  "version": 1,
+  "description": "Anotaciones manuales revisadas para evaluar deteccion y reconocimiento en las 16 imagenes de prueba.",
+  "images": [
+    {
+      "id": "imagen01",
+      "path": "assets/carpetas/pruebas/imagen01.png",
+      "split": "test",
+      "faces": [
+        {"identity": null, "registered": false, "bbox": [139, 48, 230, 230]},
+        {"identity": "phoebe", "registered": true, "bbox": [450, 45, 250, 245]},
+        {"identity": null, "registered": false, "bbox": [798, 49, 240, 240]}
+      ],
+      "notes": "Tres rostros visibles; el rostro central corresponde a Phoebe."
+    },
+    {
+      "id": "imagen02",
+      "path": "assets/carpetas/pruebas/imagen02.png",
+      "split": "test",
+      "faces": [
+        {"identity": "chandler", "registered": true, "bbox": [150, 63, 155, 155]},
+        {"identity": null, "registered": false, "bbox": [315, 38, 155, 155]}
+      ],
+      "notes": "Chandler aparece a la izquierda; el rostro de la derecha no pertenece a los registrados."
+    },
+    {
+      "id": "imagen03",
+      "path": "assets/carpetas/pruebas/imagen03.png",
+      "split": "test",
+      "faces": [
+        {"identity": "rachel", "registered": true, "bbox": [210, 95, 210, 210]}
+      ]
+    },
+    {
+      "id": "imagen04",
+      "path": "assets/carpetas/pruebas/imagen04.png",
+      "split": "test",
+      "faces": [
+        {"identity": "monica", "registered": true, "bbox": [230, 125, 230, 230]}
+      ]
+    },
+    {
+      "id": "imagen05",
+      "path": "assets/carpetas/pruebas/imagen05.png",
+      "split": "test",
+      "faces": [
+        {"identity": "phoebe", "registered": true, "bbox": [131, 452, 179, 179]},
+        {"identity": "chandler", "registered": true, "bbox": [466, 398, 186, 186]},
+        {"identity": "rachel", "registered": true, "bbox": [652, 517, 162, 162]},
+        {"identity": "ross", "registered": true, "bbox": [775, 366, 196, 196]},
+        {"identity": "monica", "registered": true, "bbox": [1103, 515, 162, 162]},
+        {"identity": "joey", "registered": true, "bbox": [1224, 412, 179, 179]}
+      ],
+      "notes": "Fotografia grupal con los seis rostros registrados."
+    },
+    {
+      "id": "imagen06",
+      "path": "assets/carpetas/pruebas/imagen06.png",
+      "split": "test",
+      "faces": [
+        {"identity": "ross", "registered": true, "bbox": [227, 78, 116, 116]},
+        {"identity": "phoebe", "registered": true, "bbox": [80, 188, 119, 119]},
+        {"identity": "monica", "registered": true, "bbox": [423, 194, 102, 102]},
+        {"identity": "rachel", "registered": true, "bbox": [219, 370, 100, 100]},
+        {"identity": "chandler", "registered": true, "bbox": [31, 425, 111, 111]},
+        {"identity": "joey", "registered": true, "bbox": [415, 458, 133, 133]}
+      ],
+      "notes": "Fotografia grupal; Monica tiene el rostro parcialmente cubierto, pero sigue siendo visible."
+    },
+    {
+      "id": "imagen07",
+      "path": "assets/carpetas/pruebas/imagen07.png",
+      "split": "test",
+      "faces": [
+        {"identity": "ross", "registered": true, "bbox": [378, 63, 208, 208]},
+        {"identity": "rachel", "registered": true, "bbox": [151, 214, 168, 168]}
+      ],
+      "notes": "Se excluye la deteccion sobre el abrigo de la derecha: no es un rostro."
+    },
+    {
+      "id": "imagen08",
+      "path": "assets/carpetas/pruebas/imagen08.png",
+      "split": "test",
+      "faces": [
+        {"identity": "chandler", "registered": true, "bbox": [0, 83, 170, 170]},
+        {"identity": "ross", "registered": true, "bbox": [548, 111, 165, 165]},
+        {"identity": "joey", "registered": true, "bbox": [940, 73, 170, 170]}
+      ],
+      "notes": "Los tres rostros estan parcialmente cubiertos por las manos; se anotan igualmente porque son identificables."
+    },
+    {
+      "id": "imagen09",
+      "path": "assets/carpetas/pruebas/imagen09.png",
+      "split": "test",
+      "faces": [
+        {"identity": "rachel", "registered": true, "bbox": [82, 145, 150, 150]},
+        {"identity": "chandler", "registered": true, "bbox": [300, 102, 168, 168]}
+      ]
+    },
+    {
+      "id": "imagen10",
+      "path": "assets/carpetas/pruebas/imagen10.png",
+      "split": "test",
+      "faces": [
+        {"identity": "chandler", "registered": true, "bbox": [115, 20, 170, 170]},
+        {"identity": "monica", "registered": true, "bbox": [404, 76, 145, 145]},
+        {"identity": "rachel", "registered": true, "bbox": [550, 130, 180, 180]},
+        {"identity": "ross", "registered": true, "bbox": [750, 0, 200, 200]}
+      ],
+      "notes": "Se anotan los cuatro rostros principales; se excluyen fragmentos de personas del fondo que no permiten una caja fiable."
+    },
+    {
+      "id": "imagen11",
+      "path": "assets/carpetas/pruebas/imagen11.png",
+      "split": "test",
+      "faces": [
+        {"identity": null, "registered": false, "bbox": [140, 72, 130, 130]},
+        {"identity": "joey", "registered": true, "bbox": [295, 58, 135, 135]}
+      ],
+      "notes": "La persona rubia de la izquierda es desconocida; Joey aparece a la derecha."
+    },
+    {
+      "id": "imagen12",
+      "path": "assets/carpetas/pruebas/imagen12.png",
+      "split": "test",
+      "faces": [
+        {"identity": "joey", "registered": true, "bbox": [79, 219, 422, 422]}
+      ]
+    },
+    {
+      "id": "imagen13",
+      "path": "assets/carpetas/pruebas/imagen13.png",
+      "split": "test",
+      "faces": [
+        {"identity": null, "registered": false, "bbox": [195, 160, 250, 250]},
+        {"identity": "monica", "registered": true, "bbox": [585, 120, 235, 235]}
+      ],
+      "notes": "Se excluye la caja sobre el cuello de Monica: es un falso positivo y no una segunda cara."
+    },
+    {
+      "id": "imagen14",
+      "path": "assets/carpetas/pruebas/imagen14.png",
+      "split": "test",
+      "faces": [
+        {"identity": "monica", "registered": true, "bbox": [108, 190, 165, 165]},
+        {"identity": null, "registered": false, "bbox": [265, 112, 205, 205]}
+      ],
+      "notes": "Se excluye la caja sobre el torso inferior: no corresponde a un rostro."
+    },
+    {
+      "id": "imagen15",
+      "path": "assets/carpetas/pruebas/imagen15.png",
+      "split": "test",
+      "faces": [
+        {"identity": null, "registered": false, "bbox": [360, 70, 310, 310]}
+      ],
+      "notes": "Rostro visible, pero no pertenece a ninguna de las seis personas registradas."
+    },
+    {
+      "id": "imagen16",
+      "path": "assets/carpetas/pruebas/imagen16.png",
+      "split": "test",
+      "faces": [
+        {"identity": null, "registered": false, "bbox": [220, 220, 220, 220]},
+        {"identity": null, "registered": false, "bbox": [345, 55, 245, 245]}
+      ],
+      "notes": "Dos rostros principales desconocidos; se excluye el fragmento parcial del fondo en el extremo izquierdo."
+    }
+  ]
+}
