@@ -547,3 +547,62 @@ Para tu perfil de desarrollo, yo lo estudiaría en este orden:
 **Python → NumPy/Pandas → estadística básica → scikit-learn → regresión/clasificación → árboles/Random Forest → evaluación de modelos → APIs con FastAPI → Docker → despliegue → después PyTorch/Deep Learning.**
 
 Eso te permitiría pasar progresivamente de **"soy desarrollador que consume modelos de IA"** a **"soy desarrollador capaz de construir e integrar sistemas de Machine Learning"**.
+
+<br>
+<br>
+<br>
+
+---
+
+# Pasos para entrenar un modelo predictivo en Jupyter Notebook
+
+Objetivo: entrenar un modelo de Machine Learning con Python, utilizando `pandas` para manipular datos, `matplotlib` para visualizarlos y `scikit-learn` para entrenar y evaluar el modelo.
+
+## Flujo de trabajo
+
+| Paso                  | Objetivo                           | Descripción                                                                                                          |
+| --------------------- | ---------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| 1. Importar librerías | Preparar el entorno                | Importar `pandas`, `matplotlib` y `sklearn`.                                                                         |
+| 2. Cargar datos       | Obtener información                | Leer un archivo CSV o Excel con `pd.read_csv()`.                                                                     |
+| 3. Explorar datos     | Conocer el dataset                 | Usar `head()`, `info()`, `describe()` y `isnull().sum()`.                                                            |
+| 4. Limpiar datos      | Mejorar su calidad                 | Tratar valores nulos, duplicados y datos incorrectos.                                                                |
+| 5. Visualizar datos   | Identificar patrones               | Crear gráficos con `matplotlib` para detectar tendencias y relaciones.                                               |
+| 6. Definir variables  | Establecer qué aprenderá el modelo | Separar las características `X` de la variable objetivo `y`.                                                         |
+| 7. Dividir los datos  | Medir la generalización            | Separar datos de entrenamiento y prueba con `train_test_split()`.                                                    |
+| 8. Entrenar el modelo | Aprender patrones                  | Elegir un algoritmo, como `LinearRegression`, `RandomForestRegressor` o `RandomForestClassifier`, según el problema. |
+| 9. Evaluar resultados | Medir el rendimiento               | Usar métricas como MAE y RMSE para regresión, o accuracy, precision y recall para clasificación.                     |
+| 10. Guardar el modelo | Reutilizar lo aprendido            | Exportarlo con `joblib` para realizar predicciones futuras.                                                          |
+
+## Estructura práctica del Notebook
+
+Organiza las celdas en este orden:
+
+```
+# 1. Importar libreríasimport pandas as pdimport matplotlib.pyplot as pltimport joblibfrom sklearn.model_selection import train_test_splitfrom sklearn.ensemble import RandomForestClassifierfrom sklearn.metrics import accuracy_score# 2. Cargar datosdf = pd.read_csv("datos.csv")# 3. Explorar y limpiarprint(df.head())print(df.info())print(df.isnull().sum())# 4. Visualizardf.hist(figsize=(10, 6))plt.tight_layout()plt.show()# 5. Separar características y objetivoX = df.drop(columns=["objetivo"])y = df["objetivo"]# 6. Dividir datos (80 % entrenamiento, 20 % prueba)X_train, X_test, y_train, y_test = train_test_split(    X, y, test_size=0.2, random_state=42)# 7. Entrenarmodelo = RandomForestClassifier(random_state=42)modelo.fit(X_train, y_train)# 8. Predecir y evaluarpredicciones = modelo.predict(X_test)print("Accuracy:", accuracy_score(y_test, predicciones))# 9. Guardarjoblib.dump(modelo, "modelo.pkl")
+```
+
+Este ejemplo supone un problema de clasificación con variables compatibles con el algoritmo. Debes reemplazar `"objetivo"` por la columna que deseas predecir.
+
+## Conceptos clave
+
+- Clasificación: predice categorías, como fraude/no fraude.
+- Regresión: predice valores numéricos, como ventas o precios.
+- Entrenamiento (`fit`): el modelo aprende patrones a partir de los datos.
+- Predicción (`predict`): genera resultados para datos nuevos.
+- Evaluación: mide si el modelo generaliza a datos que no utilizó para entrenar.&#x20;
+
+  ![image](https://www.google.com/s2/favicons?domain=https://scikit-learn.org\&sz=32)
+
+  scikit-learn 1.9.1 documentation
+
+  +1
+
+
+
+Recomendación: primero define qué quieres predecir y selecciona un dataset adecuado. Luego, realiza la limpieza y el entrenamiento; evita que los datos de prueba intervengan en el aprendizaje o la preparación del modelo.&#x20;
+
+![image](https://www.google.com/s2/favicons?domain=https://scikit-learn.org\&sz=32)
+
+scikit-learn 1.9.1 documentation
+
++1
